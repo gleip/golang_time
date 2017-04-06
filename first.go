@@ -59,10 +59,10 @@ func main() {
 				digit := number[column] - '0'
 				if 0 <= digit && digit <= 9 {
 					line += Numbers[digit][key]
-					if column != 0 && column%2 > 0 && key == 1 {
-						line += " ++ "
+					if column != 5 && column != 0 && column%2 > 0 && (key == 1 || key == 3) && timeNow.Second()%2 > 0 {
+						line += " + "
 					} else {
-						line += "    "
+						line += "   "
 					}
 				} else {
 					log.Fatal("Неправильное число")
